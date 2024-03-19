@@ -1,7 +1,9 @@
-package org.example.GuitarSpecs
+package org.example.Guitar
+
+import org.example.enums.Builder
 
 class GuitarSpec(
-    private val builder: String,
+    private val builder: Builder,
     private val model : String,
     private val type : String,
     private val topWood: String,
