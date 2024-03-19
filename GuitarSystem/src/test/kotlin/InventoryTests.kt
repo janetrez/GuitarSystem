@@ -21,4 +21,16 @@ class InventoryTests {
 
 
     }
+
+    @Test
+    fun `should return the list of matching guitar for the given guitarSpec`(){
+        val inventory = Inventory()
+        val guitarSpecs = GuitarSpec(Builder.FENDER,"model",Type.ACOUSTIC,Wood.ALDER,Wood.ALDER)
+        inventory.addGuitar(101,23.0,guitarSpecs)
+
+        val guitars = inventory.search(guitarSpecs)
+        val serialNumber = guitars.first().getSerialNumber()
+
+        assertEquals(101,serialNumber)
+    }
 }

@@ -11,4 +11,8 @@ class Inventory {
     public fun getGuitar(serialNumber: Int) : Guitar? {
         return guitars.find { it.getSerialNumber() == serialNumber }
     }
+
+    public fun search(guitarSpecs : GuitarSpec):List<Guitar>{
+        return guitars.filter{ it.getGuitarSpec() == guitarSpecs }
+    }
 }
