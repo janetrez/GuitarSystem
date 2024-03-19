@@ -5,4 +5,5 @@ class Guitar(
     private val price: Double
 ) {
         public fun getSerialNumber() = serialNumber
+    fun getPrice() = price
 }
